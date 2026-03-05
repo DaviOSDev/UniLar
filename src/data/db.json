@@ -1,0 +1,194 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "João Silva",
+      "email": "joao@email.com",
+      "senha": "123456",
+      "tipoUsuario": "locador",
+      "telefone": "(11) 98765-4321"
+    },
+    {
+      "id": "2",
+      "nome": "Maria Santos",
+      "email": "maria@email.com",
+      "senha": "123456",
+      "tipoUsuario": "locatario",
+      "telefone": "(11) 91234-5678"
+    },
+    {
+      "id": "3",
+      "nome": "Carlos Oliveira",
+      "email": "carlos@email.com",
+      "senha": "123456",
+      "tipoUsuario": "locador",
+      "telefone": "(11) 99876-5432"
+    }
+  ],
+  "imoveis": [
+    {
+      "id": "1",
+      "titulo": "Apartamento Moderno no Centro",
+      "descricao": "Apartamento completamente mobiliado, próximo ao metrô e universidades. Excelente localização com infraestrutura completa.",
+      "preco": 1800,
+      "tipo": "apartamento",
+      "status": "disponivel",
+      "endereco": {
+        "cidade": "São Paulo",
+        "bairro": "Centro",
+        "rua": "Rua das Flores",
+        "numero": "123",
+        "cep": "01234-567"
+      },
+      "proprietarioId": "1",
+      "imagens": [
+        "https://images.unsplash.com/photo-1515263487990-61b07816b324?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBhcGFydG1lbnQlMjBidWlsZGluZ3xlbnwxfHx8fDE3NzI2NDk1NDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+        "https://images.unsplash.com/photo-1593853761096-d0423b545cf9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcGFydG1lbnQlMjBraXRjaGVuJTIwaW50ZXJpb3J8ZW58MXx8fHwxNzcyNjEzMTY3fDA&ixlib=rb-4.1.0&q=80&w=1080"
+      ],
+      "quartos": 2,
+      "banheiros": 1,
+      "area": 65,
+      "mobiliado": true,
+      "aceitaPet": false,
+      "createdAt": "2024-02-15T00:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "titulo": "República Estudantil - Vagas Disponíveis",
+      "descricao": "República para estudantes com ambiente acolhedor e colaborativo. Perto da USP e UNESP. Infraestrutura completa com internet de alta velocidade.",
+      "preco": 850,
+      "tipo": "republica",
+      "status": "disponivel",
+      "endereco": {
+        "cidade": "São Paulo",
+        "bairro": "Vila Mariana",
+        "rua": "Rua dos Estudantes",
+        "numero": "456",
+        "cep": "04567-890"
+      },
+      "proprietarioId": "3",
+      "imagens": [
+        "https://images.unsplash.com/photo-1579632151052-92f741fb9b79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkZW50JTIwaG91c2UlMjBiZWRyb29tfGVufDF8fHx8MTc3MjY2NTE4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+        "https://images.unsplash.com/photo-1768289269971-6171457bed13?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzaGFyZWQlMjBzdHVkZW50JTIwYWNjb21tb2RhdGlvbnxlbnwxfHx8fDE3NzI2NjUxODV8MA&ixlib=rb-4.1.0&q=80&w=1080"
+      ],
+      "quartos": 5,
+      "banheiros": 2,
+      "area": 150,
+      "mobiliado": true,
+      "aceitaPet": true,
+      "quantidadeMoradores": 5,
+      "regrasCasa": [
+        "Respeito ao silêncio após 22h",
+        "Limpeza compartilhada das áreas comuns",
+        "Proibido fumar dentro de casa",
+        "Visitas até 23h nos dias de semana"
+      ],
+      "createdAt": "2024-02-20T00:00:00.000Z"
+    },
+    {
+      "id": "3",
+      "titulo": "Casa Aconchegante com Quintal",
+      "descricao": "Casa espaçosa perfeita para famílias ou grupos. Quintal amplo, garagem para 2 carros e área de churrasqueira.",
+      "preco": 2500,
+      "tipo": "casa",
+      "status": "disponivel",
+      "endereco": {
+        "cidade": "São Paulo",
+        "bairro": "Butantã",
+        "rua": "Rua das Acácias",
+        "numero": "789",
+        "cep": "05508-000"
+      },
+      "proprietarioId": "1",
+      "imagens": [
+        "https://images.unsplash.com/photo-1711453414798-e8d60c8731a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxob3VzZSUyMGV4dGVyaW9yJTIwZmFjYWRlfGVufDF8fHx8MTc3MjY2NTE4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+        "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb3p5JTIwbGl2aW5nJTIwcm9vbXxlbnwxfHx8fDE3NzI2NDI4MTh8MA&ixlib=rb-4.1.0&q=80&w=1080"
+      ],
+      "quartos": 3,
+      "banheiros": 2,
+      "area": 120,
+      "mobiliado": false,
+      "aceitaPet": true,
+      "createdAt": "2024-02-10T00:00:00.000Z"
+    },
+    {
+      "id": "4",
+      "titulo": "Kitnet Próxima à FMU",
+      "descricao": "Kitnet compacta e funcional, ideal para estudantes. A poucos minutos da FMU e com mercados e farmácias nas proximidades.",
+      "preco": 950,
+      "tipo": "kitnet",
+      "status": "disponivel",
+      "endereco": {
+        "cidade": "São Paulo",
+        "bairro": "Liberdade",
+        "rua": "Rua Galvão Bueno",
+        "numero": "321",
+        "cep": "01506-000"
+      },
+      "proprietarioId": "3",
+      "imagens": [
+        "https://images.unsplash.com/photo-1593853761096-d0423b545cf9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcGFydG1lbnQlMjBraXRjaGVuJTIwaW50ZXJpb3J8ZW58MXx8fHwxNzcyNjEzMTY3fDA&ixlib=rb-4.1.0&q=80&w=1080"
+      ],
+      "quartos": 1,
+      "banheiros": 1,
+      "area": 30,
+      "mobiliado": true,
+      "aceitaPet": false,
+      "createdAt": "2024-02-25T00:00:00.000Z"
+    },
+    {
+      "id": "5",
+      "titulo": "Studio Moderno em Pinheiros",
+      "descricao": "Studio contemporâneo em um dos bairros mais desejados de São Paulo. Design moderno e acabamento de primeira.",
+      "preco": 2200,
+      "tipo": "studio",
+      "status": "alugado",
+      "endereco": {
+        "cidade": "São Paulo",
+        "bairro": "Pinheiros",
+        "rua": "Rua dos Pinheiros",
+        "numero": "654",
+        "cep": "05422-001"
+      },
+      "proprietarioId": "1",
+      "imagens": [
+        "https://images.unsplash.com/photo-1515263487990-61b07816b324?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBhcGFydG1lbnQlMjBidWlsZGluZ3xlbnwxfHx8fDE3NzI2NDk1NDB8MA&ixlib=rb-4.1.0&q=80&w=1080"
+      ],
+      "quartos": 1,
+      "banheiros": 1,
+      "area": 45,
+      "mobiliado": true,
+      "aceitaPet": false,
+      "createdAt": "2024-01-30T00:00:00.000Z"
+    }
+  ],
+  "mensagens": [
+    {
+      "id": "1",
+      "texto": "Olá! Tenho interesse no apartamento. Poderia agendar uma visita?",
+      "dataEnvio": "2024-03-01T10:30:00.000Z",
+      "remetenteId": "2",
+      "destinatarioId": "1",
+      "imovelId": "1",
+      "lida": true
+    },
+    {
+      "id": "2",
+      "texto": "Claro! Que dia seria melhor para você?",
+      "dataEnvio": "2024-03-01T11:00:00.000Z",
+      "remetenteId": "1",
+      "destinatarioId": "2",
+      "imovelId": "1",
+      "lida": true
+    },
+    {
+      "id": "3",
+      "texto": "Poderia ser amanhã à tarde, por volta das 15h?",
+      "dataEnvio": "2024-03-01T11:15:00.000Z",
+      "remetenteId": "2",
+      "destinatarioId": "1",
+      "imovelId": "1",
+      "lida": false
+    }
+  ]
+}
