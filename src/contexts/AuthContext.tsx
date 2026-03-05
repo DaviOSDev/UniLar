@@ -18,7 +18,6 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export function AuthProvider({ children }: { children: ReactNode }) {
-  // Sempre exige login: não restaura sessão do localStorage
   const [usuario, setUsuario] = useState<Usuario | null>(null);
 
   const login = (email: string, senha: string): boolean => {
@@ -48,7 +47,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       tipoUsuario,
     };
 
-    addUsuario(newUser); // persiste no db (localStorage no MVP)
+    addUsuario(newUser);
     setUsuario(newUser);
     return true;
   };

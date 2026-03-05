@@ -1,14 +1,7 @@
-/**
- * Camada de acesso a dados (Repository pattern).
- * Fonte única: db.json como seed + localStorage para persistência no MVP.
- * Datas são serializadas como ISO string no armazenamento e convertidas para Date na API.
- */
-
 import type { Usuario, Imovel, Mensagem, StatusImovel } from '../types';
 
 const STORAGE_KEY = 'unilar_db';
 
-/** Formato armazenado (JSON/localStorage): datas como string ISO */
 interface ImovelRaw extends Omit<Imovel, 'createdAt'> {
   createdAt: string;
 }
@@ -34,7 +27,6 @@ function toRawMensagem(mensagem: Mensagem): MensagemRaw {
   return { ...mensagem, dataEnvio: mensagem.dataEnvio.toISOString() };
 }
 
-// Seed inicial do db.json (fonte única de dados iniciais)
 import seedData from './db.json';
 
 const seed = seedData as DbSchema;
@@ -49,7 +41,6 @@ function load(): DbSchema {
       return JSON.parse(stored) as DbSchema;
     }
   } catch {
-    // fallback para seed
   }
   return JSON.parse(JSON.stringify(seed));
 }
@@ -59,14 +50,10 @@ function persist(data: DbSchema): void {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
   } catch {
-    // ignorar falha de quota etc.
   }
 }
 
-// Estado em memória (single source of truth na sessão)
 let state: DbSchema = load();
-
-// --- API pública (somente leitura e escritas através do repositório) ---
 
 export function getUsuarios(): Usuario[] {
   return state.usuarios;
@@ -145,7 +132,6 @@ export function addMensagem(mensagem: Mensagem): void {
   persist(state);
 }
 
-/** Gera próximo ID numérico para uma entidade (evita colisão no MVP) */
 export function nextId(collection: 'usuarios' | 'imoveis' | 'mensagens'): string {
   const arr = state[collection];
   const max = arr.reduce((acc, item) => {

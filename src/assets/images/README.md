@@ -9,7 +9,6 @@ Importe as imagens nos componentes:
 ```tsx
 import logo from '@/assets/images/logo.png';
 
-// Em um componente:
 <img src={logo} alt="UniLar" className="h-10" />
 ```
 

@@ -37,7 +37,6 @@ export interface Imovel {
   area?: number;
   mobiliado?: boolean;
   aceitaPet?: boolean;
-  // Específico para repúblicas
   quantidadeMoradores?: number;
   regrasCasa?: string[];
   createdAt: Date;
